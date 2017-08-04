@@ -28,5 +28,6 @@ before_script:
   - 'npm install grunt-postcss --save-dev'
   - 'npm install grunt-contrib-connect --save-dev'
   - 'npm install grunt-contrib-watch --save-dev'
+  - 'npm install grunt-contrib-copy --save-dev'
 
 

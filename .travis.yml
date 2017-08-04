@@ -14,5 +14,5 @@ install:
   - sudo apt-get install -q google-chrome-stable
 
 before_script:
-  - 'npm install -g grunt'
+  - 'npm install grunt --save-dev'
   - 'npm install -g grunt-cli'

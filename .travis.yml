@@ -20,4 +20,5 @@ before_script:
   - 'npm install time-grunt --save-dev'
   - 'npm install jit-grunt --save-dev'
   - 'npm install jshint-stylish --save-dev'
+  - 'npm install autoprefixer-core --save-dev'
   - 'npm install -g grunt-cli'

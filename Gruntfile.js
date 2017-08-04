@@ -428,7 +428,7 @@ module.exports = function (grunt) {
         },
         pages: {
           options: {
-            remote: 'eunicecompra@github.com:expense-tracker.git',
+            remote: 'https://github.com/eunicecompra/expense-tracker.git',
             branch: 'gh-pages'
           }
         },

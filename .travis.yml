@@ -15,4 +15,5 @@ install:
 
 before_script:
   - 'npm install grunt --save-dev'
+  - 'npm install grunt-karma --save-dev'
   - 'npm install -g grunt-cli'

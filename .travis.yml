@@ -29,5 +29,9 @@ before_script:
   - 'npm install grunt-contrib-connect --save-dev'
   - 'npm install grunt-contrib-watch --save-dev'
   - 'npm install grunt-contrib-copy --save-dev'
+  - 'npm install karma --save-dev'
+  - 'npm install karma-chrome-launcher --save-dev'
+  - 'npm install karma-jasmine --save-dev'
+  - 'npm install karma-junit-reporter --save-dev'
 
 

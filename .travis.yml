@@ -14,11 +14,11 @@ install:
   - sudo apt-get install -q google-chrome-stable
 
 before_script:
-  - 'npm install grunt --save-dev'
-  - 'npm install grunt-karma --save-dev'
-  - 'npm install grunt-build-control --save-dev'
-  - 'npm install time-grunt --save-dev'
-  - 'npm install jit-grunt --save-dev'
-  - 'npm install jshint-stylish --save-dev'
-  - 'npm install autoprefixer-core --save-dev'
+  - 'npm install -g grunt'
+  - 'npm install -g grunt-karma'
+  - 'npm install -g grunt-build-control'
+  - 'npm install -g time-grunt'
+  - 'npm install -g jit-grunt'
+  - 'npm install -g jshint-stylish'
+  - 'npm install -g autoprefixer-core'
   - 'npm install -g grunt-cli'

@@ -1,0 +1,29 @@
+<div class="flexbox">
+    <div class="row row-expense">
+        <div class="col-xs-4 col-expense">
+            <b>Category</b>
+        </div>
+        <div class="col-xs-4 col-expense">
+            <b>Description</b>
+        </div>
+        <div class="col-xs-4 col-expense">
+            <b>Cost</b>
+        </div>
+    </div>
+    <div class="row row-expense" ng-repeat="expense in $ctrl.expenses">
+        <div class="col-xs-4 col-expense">{{expense.category}}</div>
+        <div class="col-xs-4 col-expense">{{expense.desc}}</div>
+        <div class="col-xs-4 col-expense text-right">${{expense.cost | number : 2}}</div>
+        <div ng-init="$ctrl.total = $ctrl.total + expense.cost"></div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">
+        </div>
+        <div class="col-xs-4 text-right">
+            <b>Total:</b>
+        </div>
+        <div class="col-xs-4 text-right">
+            <b>${{$ctrl.total | number : 2}}</b>
+        </div>
+    </div>
+</div>

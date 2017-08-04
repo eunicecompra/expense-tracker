@@ -1,0 +1,35 @@
+<div>
+    <form ng-submit="$ctrl.addExpense()">
+        <div class="row">
+            <div class="col-xs-4 col-input">
+                Category
+            </div>
+           <div class="col-xs-8 col-input">
+                 <select ng-model="$ctrl.expense.category" ng-options="cat for cat in $ctrl.categories"></select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4 col-input">
+                Description
+            </div>
+            <div class="col-xs-8 col-input">
+                <textarea ng-model="$ctrl.expense.desc" ></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4 col-input">
+                Cost
+            </div>
+            <div class="col-xs-8 col-input">
+                $<input type="number" placeholder="Decimal" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.01"
+                        class = "text-right" ng-model="$ctrl.expense.cost" ></input>
+            </div>
+        </div>
+        <div>
+            <div class="col-xs-4 col-input"></div>
+            <div class="col-xs-8 col-add">
+                <button type="submit">Add</button>
+            </div>
+        </div>
+    </form>
+</div>

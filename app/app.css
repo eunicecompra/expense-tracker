@@ -1,0 +1,49 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li + li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.row-expense:nth-child(odd){
+  background: #eee;
+}
+
+.col-main {
+  margin: 5px;
+}
+
+.col-expense {
+  padding: 5px;
+  border: 1px solid #000;
+  flex: 1;
+  height:100%;
+  display:table-cell;
+}
+
+.col-input {
+  padding: 10px;
+}
+
+.col-add {
+  text-align: center;
+}

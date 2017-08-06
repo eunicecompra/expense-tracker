@@ -7,10 +7,15 @@ angular.module('expenseInput').
             var self = this;
             self.categories = ['FOOD', 'TRANSPORTATION', 'GROCERIES', 'SHOPPING', 'OTHERS'];
             self.expense = {};
+            self.expense.category = 'FOOD';
+            self.counter = 0;
 
             self.addExpense = function() {
+                self.counter++;
+                self.expense.counter = self.counter ;
                 ExpenseService.expenses.push(self.expense);
                 self.expense = {};
+                self.expense.category = 'FOOD';
             }
 
         }

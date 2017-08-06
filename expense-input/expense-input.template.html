@@ -1,11 +1,15 @@
 <div>
-    <form ng-submit="$ctrl.addExpense()">
+    <form name="expenseInputForm" ng-submit="$ctrl.addExpense()">
         <div class="row">
             <div class="col-xs-4 col-input">
                 Category
             </div>
            <div class="col-xs-8 col-input">
-                 <select ng-model="$ctrl.expense.category" ng-options="cat for cat in $ctrl.categories"></select>
+                 <select name="category" ng-model="$ctrl.expense.category"
+                         ng-options="cat for cat in $ctrl.categories" required></select>
+                 <small>
+                   <span class="text-danger" ng-show="expenseInputForm.category.$error.required">Input required.</span>
+                 </small>
             </div>
         </div>
         <div class="row">
@@ -13,7 +17,10 @@
                 Description
             </div>
             <div class="col-xs-8 col-input">
-                <textarea ng-model="$ctrl.expense.desc" ></textarea>
+                <textarea name="desc" ng-model="$ctrl.expense.desc" required></textarea>
+               <small>
+                <span class="text-danger" ng-show="expenseInputForm.desc.$error.required">Input required.</span>
+               </small>
             </div>
         </div>
         <div class="row">
@@ -21,8 +28,11 @@
                 Cost
             </div>
             <div class="col-xs-8 col-input">
-                $<input type="number" placeholder="Decimal" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.01"
-                        class = "text-right" ng-model="$ctrl.expense.cost" ></input>
+                $<input name="cost" type="number" placeholder="Decimal" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.01"
+                        class = "text-right" ng-model="$ctrl.expense.cost" required></input>
+              <small>
+                <span class="text-danger" ng-show="expenseInputForm.cost.$error.required">Input required.</span>
+              </small>
             </div>
         </div>
         <div>
